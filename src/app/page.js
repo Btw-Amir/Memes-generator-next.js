@@ -59,8 +59,8 @@ cardCont:{
   <div>
     <Navbar/>
     <div style={styles.cover}>
-    {data.map(function(items){
-      return<div style={styles.main}>
+    {data.map(function(items,index){
+      return<div style={styles.main} key={index}>
       <div style={styles.card}>
 <img style={styles.img}  src={items.url} alt='meme-image'/>
 <div style={styles.cardCont}>

@@ -27,8 +27,15 @@
     
 }
 .operation>button{
-    background:#752392;
 border-radius:8px;
 padding:5px 10px;
 margin:2px 10px
 }
+.generating{
+    background:#7523925d;
+}
+.generate{
+    background:#752392;
+
+}
+

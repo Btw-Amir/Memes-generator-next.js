@@ -18,7 +18,7 @@ export default function details(props) {
         const result = await res.json()
         setPost(result.data.url)
         setBtn(true)
-
+        setTextI(null)
     }
     
 
@@ -33,7 +33,7 @@ export default function details(props) {
             <div className='operation'>
                 <input type='text' placeholder='Enter first text' onChange={(e) =>setText(e.target.value)} />
                 <input type='text' placeholder='Enter second text' onChange={(e) =>setTextI(e.target.value)} />
-                <button style={{color:'white'}} onClick={submit} disabled={!btn}>{btn?"Confirm":"please wait.."}</button>
+                <button style={{color:'white'}}  className={!btn?"generating":"generate"}onClick={submit} disabled={!btn}>{btn?"Confirm":"please wait.."}</button>
             </div>
         </div>
     </div>
