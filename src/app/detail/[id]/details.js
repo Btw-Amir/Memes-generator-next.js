@@ -1,6 +1,7 @@
 "use client"
 import './page.css'
 import { useState } from 'react'
+// import {fi?}
 export default function details(props) {
     const{Detail}= props
     const [text,setText]= useState('')
@@ -18,7 +19,8 @@ export default function details(props) {
         const result = await res.json()
         setPost(result.data.url)
         setBtn(true)
-        setTextI(null)
+        setTextI('') 
+        setText('')
     }
     
 
@@ -31,9 +33,13 @@ export default function details(props) {
         <p>{Detail.name}</p>
             </div>
             <div className='operation'>
-                <input type='text' placeholder='Enter first text' onChange={(e) =>setText(e.target.value)} />
-                <input type='text' placeholder='Enter second text' onChange={(e) =>setTextI(e.target.value)} />
+                
+                <input type='text' required value={text}  placeholder='Enter first text' onChange={(e) =>setText(e.target.value)} />
+                <input type='text' required value={textI} placeholder='Enter second text' onChange={(e) =>setTextI(e.target.value)} />
                 <button style={{color:'white'}}  className={!btn?"generating":"generate"}onClick={submit} disabled={!btn}>{btn?"Confirm":"please wait.."}</button>
+        {/* <a href={post} download> */}
+                {/* <button  style={{color:'white'}} className={"generate"} >Download</button> */}
+        {/* </a> */}
             </div>
         </div>
     </div>

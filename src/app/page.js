@@ -2,12 +2,13 @@
 import Navbar from './Components/Navbar/navbar'
 import Link from 'next/link'
 export default async function Home() {
-  const res = await fetch('https://api.imgflip.com/get_memes')
+  const res = await fetch('https://api.imgflip.com/get_memes', { next: { revalidate: 3600 } })
   const result = await res.json()
 const data = result.data.memes
   const styles ={
   card:{
     border: "2px solid #752392",
+    // background:'white',s
     height: "332px",
     width: "281px",
     borderRadius: "4px",

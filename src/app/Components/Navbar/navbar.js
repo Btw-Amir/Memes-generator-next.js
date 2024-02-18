@@ -1,4 +1,7 @@
 import Link from "next/link"
+import Image from "next/image";
+
+// import pic from ''
 export default function navbar() {
   const styles = {
     nav: {
@@ -26,8 +29,16 @@ export default function navbar() {
         <Link href={"/"}> <h3>Meme Generator</h3></Link>
       </div>
       <div style={styles.right}>
-        <h3>Next-js</h3>
-        <h3>Project: 01</h3>
+      <Image
+                    className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+                    src="/next.svg"
+                    alt="Next.js Logo"
+                    style={{color:"white"}}
+                    // fill:'white'
+                    width={80}
+                    height={37}
+                    priority
+                />
       </div>
     </div>
   )
