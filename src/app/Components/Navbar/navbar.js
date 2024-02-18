@@ -21,7 +21,7 @@ export default function navbar() {
   return (
     <div style={styles.nav}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-        <img style={{ background: 'none', borderRadius: "50%" }} height={40} width={40} src="https://i.pinimg.com/originals/71/9c/10/719c10fb577785c70c66e50c24381e0c.jpg" />
+        <img alt="icon" style={{ background: 'none', borderRadius: "50%" }} height={40} width={40} src="https://i.pinimg.com/originals/71/9c/10/719c10fb577785c70c66e50c24381e0c.jpg" />
 
         <Link href={"/"}> <h3>Meme Generator</h3></Link>
       </div>

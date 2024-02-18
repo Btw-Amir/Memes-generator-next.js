@@ -27,7 +27,7 @@ export default function details(props) {
        <div className='parent'>
             <div className='before'>
 
-        <img src={post?post:Detail.url} />
+        <img alt='meme' src={post?post:Detail.url} />
         <p>{Detail.name}</p>
             </div>
             <div className='operation'>
